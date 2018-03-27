@@ -1,8 +1,7 @@
 SOURCE_DIR = src
 DEST_DIRS = out1 out2
 SOURCE_FILES = $(wildcard $(SOURCE_DIR)/*.x)
-DEST_FILES = $(foreach dest,$(DEST_DIRS), \
-  $(patsubst $(SOURCE_DIR)/%,$(dest)/%,$(SOURCE_FILES)))
+DEST_FILES = $(foreach dest,$(DEST_DIRS), $(patsubst $(SOURCE_DIR)/%,$(dest)/%,$(SOURCE_FILES)))
 
 .SUFFIXES:
 
