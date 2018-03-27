@@ -8,10 +8,6 @@ DEST_FILES = $(foreach dest,$(DEST_DIRS), \
 
 .PHONY: all
 all: $(DEST_FILES)
-	@echo SOURCE_DIR=$(SOURCE_DIR)
-	@echo SOURCE_FILES=$(SOURCE_FILES)
-	@echo DEST_DIRS=$(DEST_DIRS)
-	@echo DEST_FILES=$(DEST_FILES)
 
 .PHONY: clean
 clean:
