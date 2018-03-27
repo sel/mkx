@@ -6,10 +6,8 @@ DEST_FILES = $(foreach dest,$(DEST_DIRS), \
 
 .SUFFIXES:
 
-.PHONY: all
 all: $(DEST_FILES)
 
-.PHONY: clean
 clean:
 	$(RM) -r $(DEST_DIRS)
 
