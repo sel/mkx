@@ -20,8 +20,8 @@ clean:
 $(DEST_DIRS): % :
 	mkdir $@
 
-out1/%.x: out1 $(SOURCE_DIR)/%.x
-	cp -f $(lastword $^) $@
+PERCENT := %
 
-out2/%.x: out2 $(SOURCE_DIR)/%.x
+.SECONDEXPANSION:
+$(DEST_FILES): %: $$(dir $$*) $$(filter $$(PERCENT)/$$(notdir $$*), $(SOURCE_FILES))
 	cp -f $(lastword $^) $@
